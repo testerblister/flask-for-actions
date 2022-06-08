@@ -1,0 +1,8 @@
+name: api-tests
+on: [push]
+
+jobs:
+    test-apis:
+        runs-on: ubuntu-latest
+        steps:
+            - run: python3 -m pytest
