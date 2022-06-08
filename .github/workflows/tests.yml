@@ -5,5 +5,10 @@ jobs:
     test-apis:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-python@v1
+              with:
+                  python-version: 3.8
+
             - run: python3 -m pip install -r requirements.txt
             - run: python3 -m pytest
